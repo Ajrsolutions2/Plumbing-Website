@@ -92,8 +92,21 @@
     .sticky-call{position:fixed;left:0;right:0;bottom:0;display:none;gap:10px;justify-content:center;padding:10px;background:#0b1220}
     .sticky-call a{background:var(--brand);color:#fff;border-radius:999px;padding:10px 16px;font-weight:900;border:2px solid var(--accent)}
 
+    /* new sections */
+    .about-section{background:#f8fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0}
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .project-card{background:#fff;border:1px solid #e2e8f0;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .project-card h4{margin:0 0 8px;color:var(--brand)}
+    .why-choose{background:#f6f3ff;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0}
+    .features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .feature-card{background:#fff;border:1px solid #e2e8f0;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .feature-card h4{margin:0 0 8px;color:var(--brand)}
+    .estimate-form{background:var(--card);border:1px solid #e2e8f0;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+    .locations-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .location-item{display:flex;align-items:center;gap:8px;padding:8px 0}
+
     @media (max-width:960px){
-      .hero-wrap,.grid,.specials,.reviews,.split{grid-template-columns:1fr}
+      .hero-wrap,.grid,.specials,.reviews,.split,.projects-grid,.features-grid,.locations-grid{grid-template-columns:1fr}
     }
     @media (max-width:640px){
       .nav-links{display:none}
@@ -116,11 +129,11 @@
       <a class="brand" href="#top"><span class="logo">RD</span> Royal Dukes Plumbing</a>
       <nav class="nav-links" aria-label="Primary">
         <a href="#services">Services</a>
-        <a href="#specials">Specials</a>
-        <a href="#financing">Financing</a>
+        <a href="#about">About Us</a>
+        <a href="#projects">Projects</a>
         <a href="#reviews">Reviews</a>
         <a href="#areas">Service Area</a>
-        <a href="#contact" class="btn">Request Service</a>
+        <a href="#contact" class="btn">Free Estimate</a>
       </nav>
     </div>
   </header>
@@ -129,44 +142,163 @@
   <main id="top" class="hero">
     <div class="container hero-wrap">
       <div>
-        <div class="eyebrow">Trusted • Fast • Upfront Pricing</div>
-        <h1>Plumbing & Drain Pros — Here When You Need Us</h1>
-        <p class="lead">Emergency leaks, clogged drains, water heaters, fixtures, sewers — we handle it all with clean, respectful service.</p>
+        <div class="eyebrow">Top-Rated • Trusted • Local</div>
+        <h1>Expert Plumbing Services in Jersey City & Beyond</h1>
+        <p class="lead">From emergency repairs to full system installations, Royal Dukes Plumbing delivers trusted, high-quality plumbing services. Whether you need fast fixes, routine maintenance, or a complete plumbing upgrade, our licensed team is here to keep your system running right.</p>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
-          <a class="btn" href="#contact">Book Online</a>
+          <a class="btn" href="#contact">Request Free Estimate</a>
           <a class="btn" href="tel:+12407806969" style="background:#111827;border-color:var(--accent)">Call 240‑780‑6969</a>
         </div>
         <div class="badges">
-          <div class="badge">✅ Insured</div>
-          <div class="badge">💵 Upfront, Flat-Rate Pricing</div>
+          <div class="badge">✅ Licensed & Insured</div>
+          <div class="badge">💵 Upfront Pricing</div>
           <div class="badge">⏱️ Same‑Day Service</div>
-          <div class="badge">🧼 Shoe Covers & Clean Work</div>
+          <div class="badge">🧼 Clean Work</div>
         </div>
       </div>
-      <aside class="hero-card" aria-label="Highlights">
-        <strong>Why Choose Royal Dukes</strong>
-        <ul>
+      <aside class="hero-card" aria-label="Free Estimate">
+        <strong>Request a Free Estimate</strong>
+        <p style="margin:8px 0">Enter your details below, and we'll get back to you!</p>
+        <form style="margin-top:16px">
+          <div style="margin-bottom:12px">
+            <input type="text" placeholder="Full Name" required style="margin-bottom:8px"/>
+            <input type="tel" placeholder="Phone Number" required style="margin-bottom:8px"/>
+            <input type="text" placeholder="Location" required style="margin-bottom:8px"/>
+            <button class="btn" type="submit" style="width:100%">Request Estimate</button>
+          </div>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <!-- About Us -->
+  <section id="about" class="about-section">
+    <div class="container split">
+      <div>
+        <h2 class="title">Who We Are</h2>
+        <h3>Experienced, Trusted, Local Plumbers in Jersey City</h3>
+        <p class="sub">Dealing with plumbing issues? We've got you covered. At Royal Dukes Plumbing, our certified technicians handle everything—from clogged drains and pipe leaks to water heater repairs and full system installations. We work with top brands and use the latest tools to deliver long-lasting results.</p>
+        <p class="sub">With years of experience, we've earned the trust of homeowners and businesses across Jersey City, Hoboken, Weehawken, Union City, and NYC. When you choose us, you get expert service, clear communication, and no surprises.</p>
+        <a class="btn" href="#contact">Learn More</a>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Why Choose Royal Dukes</h3>
+        <ul style="margin:10px 0 0; padding-left:18px; color:var(--muted)">
           <li>Real humans 24/7</li>
           <li>Fully stocked vans for faster fixes</li>
           <li>Parts & labor warranty</li>
           <li>5‑star local reviews</li>
+          <li>Licensed & insured technicians</li>
+          <li>Upfront, flat-rate pricing</li>
         </ul>
-      </aside>
+      </div>
     </div>
-  </main>
+  </section>
 
   <!-- Services -->
   <section id="services">
     <div class="container">
       <h2 class="title">Plumbing & Drain Services</h2>
-      <p class="sub">Straightforward options for homes, apartments, and brownstones.</p>
+      <p class="sub">We provide a full range of plumbing services tailored to your needs.</p>
       <div class="grid" role="list">
-        <article class="card" role="listitem"><h3>Emergency Repairs</h3><p>Burst pipes, leaks, no hot water — day or night.</p></article>
-        <article class="card" role="listitem"><h3>Drain Cleaning</h3><p>Clogs cleared fast with pro equipment.</p></article>
-        <article class="card" role="listitem"><h3>Water Heaters</h3><p>Repair & replacement — tank & tankless.</p></article>
-        <article class="card" role="listitem"><h3>Fixture Installs</h3><p>Faucets, toilets, showers, disposals.</p></article>
-        <article class="card" role="listitem"><h3>Leak Detection</h3><p>Find hidden issues before they spread.</p></article>
-        <article class="card" role="listitem"><h3>Sewer & Camera</h3><p>Pinpoint underground problems.</p></article>
+        <article class="card" role="listitem">
+          <h3>Plumbing Repairs</h3>
+          <p>We handle everything from leaks and clogs to broken fixtures and burst pipes. Our licensed plumbers provide fast, reliable repairs that get your system back on track.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Drain Cleaning & Unclogging</h3>
+          <p>Slow or blocked drains are no match for our professional cleaning tools and techniques. We clear out buildup in sinks, showers, and main lines to restore proper flow.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Water Heater Repair & Installation</h3>
+          <p>We service all types of water heaters—tank and tankless—so you never go without hot water. Whether it's a quick repair or a brand-new installation, we've got you covered.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Emergency Plumbing Services</h3>
+          <p>Plumbing problems don't follow a schedule, which is why we offer 24/7 emergency service. Whether it's a burst pipe, overflowing toilet, or major leak, we respond fast.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Sewer Line Repair & Replacement</h3>
+          <p>Damaged sewer lines can cause serious issues like backups and property damage. We diagnose problems quickly and repair or replace lines using safe, efficient methods.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Leak Detection & Repair</h3>
+          <p>Hidden leaks can lead to high water bills, mold, and structural damage. Our team uses modern tools to pinpoint and fix leaks before they spread.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Projects -->
+  <section id="projects" style="background:#f8fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+    <div class="container">
+      <h2 class="title">Recent Projects</h2>
+      <p class="sub">Hear from our happy clients</p>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h4>Water Heater Installation</h4>
+          <p>Clean, quick setup for residential systems. Installed new tankless water heater in downtown Jersey City apartment.</p>
+        </div>
+        <div class="project-card">
+          <h4>Leak Detection & Repair</h4>
+          <p>Preventing water damage with pinpoint accuracy. Found and fixed hidden pipe leak in Hoboken brownstone.</p>
+        </div>
+        <div class="project-card">
+          <h4>Sewer Line Replacement</h4>
+          <p>Safe and efficient excavation and pipe work. Replaced main sewer line in Weehawken home using trenchless technology.</p>
+        </div>
+        <div class="project-card">
+          <h4>Emergency Repairs</h4>
+          <p>24/7 fast response to plumbing emergencies. Fixed burst pipe in Union City restaurant within 2 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews">
+    <div class="container">
+      <h2 class="title">Hear From Our Happy Clients</h2>
+      <p class="sub">We're proud to serve our local community. Here's what customers say about Royal Dukes Plumbing:</p>
+      <div class="reviews">
+        <blockquote class="quote">
+          "I had a pipe burst late at night and honestly didn't expect anyone to answer. Royal Dukes showed up within an hour and had it fixed the same night. Super friendly and fair pricing."
+          <footer><strong>Alex R.</strong> Jersey City</footer>
+        </blockquote>
+        <blockquote class="quote">
+          "Our water heater went out right before family came to stay. I called the team and they installed a new one the next morning. Everything was up and running before the guests arrived."
+          <footer><strong>Mia K.</strong> Hoboken</footer>
+        </blockquote>
+        <blockquote class="quote">
+          "They unclogged a nasty kitchen drain and explained everything they were doing along the way. No mess left behind and no upselling. Very professional and polite."
+          <footer><strong>Jordan S.</strong> Weehawken</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-choose">
+    <div class="container">
+      <h2 class="title">Why Choose Royal Dukes Plumbing?</h2>
+      <p class="sub">We provide a full range of plumbing services tailored to your needs.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h4>Transparent Pricing</h4>
+          <p>No hidden fees, no surprises—just honest pricing. We'll give you a clear estimate before any work begins so you know exactly what to expect.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Licensed Professionals</h4>
+          <p>Our team consists of licensed, certified technicians with years of experience. We stay up-to-date with the latest plumbing technologies and techniques.</p>
+        </div>
+        <div class="feature-card">
+          <h4>24/7 Emergency Service</h4>
+          <p>Plumbing emergencies don't wait for business hours. We're available around the clock to handle urgent issues and get your system back up and running.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Quality Guarantee</h4>
+          <p>We stand behind our work with comprehensive warranties on parts and labor. Your satisfaction and the quality of our work is our top priority.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -203,36 +335,27 @@
     </div>
   </section>
 
-  <!-- Reviews -->
-  <section id="reviews">
-    <div class="container">
-      <h2 class="title">What Neighbors Say</h2>
-      <p class="sub">Real feedback from local homeowners.</p>
-      <div class="reviews">
-        <blockquote class="quote">“Showed up fast, fixed our burst pipe, and left everything spotless.” — <strong>Alex R.</strong></blockquote>
-        <blockquote class="quote">“Upfront price, no surprises. New tankless works perfectly.” — <strong>Mia K.</strong></blockquote>
-        <blockquote class="quote">“Friendly techs, great communication. Highly recommend.” — <strong>Jordan S.</strong></blockquote>
-      </div>
-    </div>
-  </section>
-
   <!-- Service area -->
   <section id="areas">
-    <div class="container split">
-      <div>
-        <h2 class="title">Service Area</h2>
-        <p class="sub">Jersey City, Hoboken, Weehawken, Union City, and New York City.</p>
-        <ul style="color:var(--muted)">
-          <li>Jersey City</li>
-          <li>Hoboken</li>
-          <li>Weehawken</li>
-          <li>Union City</li>
-          <li>New York City</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3 style="margin-top:0">Brands We Service</h3>
-        <p class="sub">AO Smith • Rheem • Navien • Kohler • Moen • Delta</p>
+    <div class="container">
+      <h2 class="title">Service Area</h2>
+      <p class="sub">Jersey City, Hoboken, Weehawken, Union City, and New York City.</p>
+      <div class="split">
+        <div>
+          <p class="sub">We proudly serve these locations with fast, reliable plumbing services:</p>
+          <div class="locations-grid">
+            <div class="location-item">📍 Jersey City</div>
+            <div class="location-item">📍 Hoboken</div>
+            <div class="location-item">📍 Weehawken</div>
+            <div class="location-item">📍 Union City</div>
+            <div class="location-item">📍 New York City</div>
+            <div class="location-item">📍 Bayonne</div>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Brands We Service</h3>
+          <p class="sub">AO Smith • Rheem • Navien • Kohler • Moen • Delta • American Standard • Toto</p>
+        </div>
       </div>
     </div>
   </section>
@@ -240,11 +363,13 @@
   <!-- FAQ -->
   <section id="faq">
     <div class="container">
-      <h2 class="title">FAQ</h2>
+      <h2 class="title">Frequently Asked Questions</h2>
       <div style="display:grid;gap:10px">
-        <details><summary>Do you offer same‑day service?</summary><div>Yes, we keep open slots daily for urgent issues.</div></details>
-        <details><summary>Are estimates free?</summary><div>Yes, we provide free, no‑obligation estimates.</div></details>
-        <details><summary>Do you install customer‑supplied fixtures?</summary><div>We can, and we’ll advise on compatibility and warranties.</div></details>
+        <details><summary>Do you offer same‑day service?</summary><div>Yes, we keep open slots daily for urgent issues and offer 24/7 emergency service.</div></details>
+        <details><summary>Are estimates free?</summary><div>Yes, we provide free, no‑obligation estimates for all plumbing services.</div></details>
+        <details><summary>Do you install customer‑supplied fixtures?</summary><div>We can, and we'll advise on compatibility and warranties.</div></details>
+        <details><summary>What areas do you serve?</summary><div>We serve Jersey City, Hoboken, Weehawken, Union City, NYC, and surrounding areas.</div></details>
+        <details><summary>Do you offer financing?</summary><div>Yes, we offer flexible financing options for larger projects like water heaters and sewer work.</div></details>
       </div>
     </div>
   </section>
@@ -253,35 +378,44 @@
   <section id="contact" style="border-top:1px solid #e5e7eb">
     <div class="container split">
       <div>
-        <h2 class="title">Request Service</h2>
-        <p class="sub">Tell us what’s going on and when we can stop by.</p>
+        <h2 class="title">Get a Free Estimate Today!</h2>
+        <p class="sub">Whether it's a quick fix or a full install, we're here to help. Reach out now to schedule your service.</p>
         <form id="contactForm" novalidate>
-          <div><label for="name">Name</label><input id="name" name="name" required placeholder="Your full name"/></div>
-          <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required placeholder="240‑780‑6969"/></div>
-          <div><label for="email">Email (optional)</label><input id="email" name="email" type="email" placeholder="you@example.com"/></div>
-          <div><label for="service">Service Needed</label>
+          <div><label for="name">Full Name</label><input id="name" name="name" required placeholder="Your full name"/></div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@example.com"/></div>
+          <div><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" required placeholder="240‑780‑6969"/></div>
+          <div><label for="location">Location</label><input id="location" name="location" required placeholder="City, State"/></div>
+          <div><label for="service">Service Type</label>
             <select id="service" name="service" required>
               <option value="" disabled selected>Select a service</option>
-              <option>Emergency Repair</option>
-              <option>Drain Cleaning</option>
-              <option>Water Heater</option>
-              <option>Leak Detection</option>
-              <option>Fixture Install</option>
-              <option>Sewer / Camera Inspection</option>
+              <option>Plumbing Repairs</option>
+              <option>Drain Cleaning & Unclogging</option>
+              <option>Water Heater Repair & Installation</option>
+              <option>Emergency Plumbing Services</option>
+              <option>Sewer Line Repair & Replacement</option>
+              <option>Leak Detection & Repair</option>
+              <option>Other</option>
             </select>
           </div>
-          <div><label for="msg">Describe the issue</label><textarea id="msg" name="msg" rows="4" required placeholder="Tell us what’s happening…"></textarea></div>
-          <button class="btn" type="submit">Send Request</button>
+          <button class="btn" type="submit">Request Estimate</button>
           <p id="formMsg" style="color:var(--muted);margin:8px 0 0"></p>
         </form>
       </div>
-      <div class="card">
-        <h3 style="margin-top:0">Contact</h3>
+      <div class="estimate-form">
+        <h3 style="margin-top:0">Contact Information</h3>
         <p style="margin:0 0 6px"><strong>Royal Dukes Plumbing</strong></p>
         <p style="margin:0 0 6px">123 Washington St, Hoboken, NJ 07030</p>
         <p style="margin:0 0 6px">Phone: <a href="tel:+12407806969">240‑780‑6969</a></p>
         <p style="margin:0 0 6px">Email: <a href="mailto:service@royaldukesplumbing.com">service@royaldukesplumbing.com</a></p>
         <p style="margin:0">Hours: Open 24/7</p>
+        
+        <h4 style="margin:20px 0 10px">Quick Links</h4>
+        <ul style="margin:0; padding-left:18px; color:var(--muted)">
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -297,7 +431,7 @@
   <!-- Sticky call (mobile) -->
   <div class="sticky-call" role="region" aria-label="Quick call">
     <a href="tel:+12407806969">Call 240‑780‑6969</a>
-    <a href="#contact">Book Online</a>
+    <a href="#contact">Free Estimate</a>
   </div>
 
   <script>
@@ -307,7 +441,7 @@
     // Simple form handler (replace with backend)
     const form=document.getElementById('contactForm');
     const msg=document.getElementById('formMsg');
-    form?.addEventListener('submit',e=>{e.preventDefault();const data=Object.fromEntries(new FormData(form).entries());if(!data.name||!data.phone||!data.service||!data.msg){msg.textContent='Please fill out required fields.';return;}msg.textContent='Thanks! Your request has been received. We\'ll call you shortly.';form.reset()});
+    form?.addEventListener('submit',e=>{e.preventDefault();const data=Object.fromEntries(new FormData(form).entries());if(!data.name||!data.email||!data.phone||!data.location||!data.service){msg.textContent='Please fill out required fields.';return;}msg.textContent='Thanks! Your estimate request has been received. We\'ll get back to you shortly.';form.reset()});
 
     // year
     document.getElementById('year').textContent=new Date().getFullYear();
@@ -329,4 +463,3 @@
   </script>
 </body>
 </html>
-
