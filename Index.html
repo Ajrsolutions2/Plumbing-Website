@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Royal Dukes Plumbing | Hoboken Plumbers & Drain Services</title>
+  <meta name="description" content="Royal Dukes Plumbing provides fast, reliable plumbing and drain services in Hoboken, NJ. 24/7 emergencies, fair pricing, licensed & insured.">
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph for social -->
+  <meta property="og:title" content="Royal Dukes Plumbing | Hoboken Plumbers & Drain Services" />
+  <meta property="og:description" content="Fast, reliable plumbing in Hoboken. 24/7 emergency service." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com" />
+  <meta property="og:image" content="https://example.com/cover.jpg" />
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --ink: #1f2937; /* slate-800 */
+      --muted: #6b7280; /* gray-500 */
+      --brand: #0ea5e9; /* sky-500 */
+      --brand-dark: #0284c7; /* sky-600 */
+      --card: #f8fafc; /* slate-50 */
+      --ring: rgba(2,132,199,0.35);
+      --maxw: 1100px;
+      --radius: 16px;
+      --shadow: 0 10px 25px rgba(2, 8, 20, 0.06);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--ink); }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* Layout */
+    .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
+    header { position: sticky; top: 0; backdrop-filter: blur(8px); background: rgba(255,255,255,0.8); border-bottom: 1px solid #e5e7eb; z-index: 50; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: 0.2px; }
+    .logo { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: var(--brand); color: white; font-weight: 900; box-shadow: var(--shadow); }
+    .nav-links { display: flex; gap: 20px; align-items: center; }
+    .nav a { color: var(--muted); font-weight: 600; }
+    .cta { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: var(--brand); color: #fff; border-radius: 999px; font-weight: 700; box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,0.5); }
+    .cta:hover { background: var(--brand-dark); }
+
+    /* Hero */
+    .hero { padding: 56px 0 28px; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 45%); border-bottom: 1px solid #e5e7eb; }
+    .hero-wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: center; }
+    .eyebrow { color: var(--brand-dark); font-weight: 800; letter-spacing: 1px; text-transform: uppercase; font-size: 12px; }
+    h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.1; margin: 8px 0 12px; }
+    .lead { color: var(--muted); font-size: 18px; max-width: 60ch; }
+    .hero-cta { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; align-items: center; }
+    .secondary { padding: 10px 16px; border-radius: 999px; border: 1px solid #cbd5e1; background: #fff; font-weight: 700; }
+    .hero-card { background: var(--card); border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+    .hero-card ul { margin: 0; padding: 0 0 0 20px; }
+
+    /* Section */
+    section { padding: 48px 0; }
+    .section-title { font-size: 24px; margin: 0 0 10px; }
+    .section-lead { color: var(--muted); margin: 0 0 18px; }
+
+    /* Services */
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { background: var(--card); border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+    .card h3 { margin: 0 0 6px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    /* About / Split */
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 999px; background: #fff; font-weight: 700; }
+
+    /* Contact */
+    form { display: grid; gap: 12px; }
+    label { font-weight: 600; font-size: 14px; }
+    input, textarea, select { width: 100%; padding: 12px; border-radius: 12px; border: 1px solid #cbd5e1; background: #fff; font: inherit; color: var(--ink); }
+    input:focus, textarea:focus, select:focus { outline: 2px solid var(--ring); border-color: var(--brand-dark); }
+
+    /* Footer */
+    footer { background: #0b1220; color: #cbd5e1; padding: 36px 0; margin-top: 12px; }
+    footer a { color: #e2e8f0; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-wrap { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr 1fr; }
+      .split { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "Royal Dukes Plumbing",
+    "image": "https://example.com/cover.jpg",
+    "url": "https://example.com",
+    "telephone": "+1-201-555-0123",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Washington St",
+      "addressLocality": "Hoboken",
+      "addressRegion": "NJ",
+      "postalCode": "07030",
+      "addressCountry": "US"
+    },
+    "areaServed": "Hoboken, New Jersey",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="nav" aria-label="Main">
+        <a class="brand" href="#top" aria-label="Royal Dukes Plumbing Home">
+          <span class="logo" aria-hidden="true">RD</span>
+          <span>Royal Dukes Plumbing</span>
+        </a>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a class="cta" href="tel:+12015550123">Call 24/7: (201) 555‑0123</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top" class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <span class="eyebrow">Hoboken • 24/7 Emergency Service</span>
+        <h1>Plumbing & Drain Services You Can Count On</h1>
+        <p class="lead">From emergency leaks to routine installs, Royal Dukes Plumbing delivers fast, friendly, and fair‑priced service across Hoboken. Licensed, insured, and local.</p>
+        <div class="hero-cta">
+          <a class="cta" href="#contact">Request Service</a>
+          <a class="secondary" href="mailto:service@royaldukesplumbing.com">Email Us</a>
+        </div>
+        <div style="margin-top:14px;color:var(--muted);font-size:14px;">NJ License #PL-000000 • Free estimates • Same‑day appointments</div>
+      </div>
+      <aside class="hero-card" aria-label="Fast facts">
+        <strong>Why choose us</strong>
+        <ul>
+          <li>Upfront pricing — no surprises</li>
+          <li>Real humans on the phone 24/7</li>
+          <li>Clean, respectful technicians</li>
+          <li>Fully stocked vans for faster fixes</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Plumbing & Drain Services</h2>
+      <p class="section-lead">Straightforward solutions for homes, apartments, and brownstones in Hoboken.</p>
+      <div class="grid" role="list">
+        <article class="card" role="listitem">
+          <h3>Emergency Repairs</h3>
+          <p>Burst pipes, no hot water, leaking fixtures — we’re on call day and night.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Drain Cleaning</h3>
+          <p>Clogged sinks, tubs, and mains cleared fast with pro equipment.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Water Heaters</h3>
+          <p>Repair, replacement, and new installs — tank & tankless options.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Fixture Installs</h3>
+          <p>Faucets, toilets, showers, garbage disposals — neat, warrantied work.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Leak Detection</h3>
+          <p>Find hidden leaks before they cause damage; moisture & camera inspections.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Sewer & Camera Inspections</h3>
+          <p>Pinpoint issues underground and plan repairs with confidence.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container split">
+      <div>
+        <h2 class="section-title">Local, Licensed, and Proudly Hoboken</h2>
+        <p class="section-lead">We’re neighbors. That’s why we show up on time, protect your space, and stand behind our work.</p>
+        <div class="badge" aria-label="Guarantee">✅ 100% Satisfaction Guarantee</div>
+        <ul style="margin-top:12px; color:var(--muted);">
+          <li>Fully licensed & insured technicians</li>
+          <li>Transparent quotes before any work starts</li>
+          <li>Parts & labor warranty</li>
+        </ul>
+      </div>
+      <div class="card" aria-label="Service area">
+        <h3 style="margin-top:0">Service Area</h3>
+        <p class="section-lead" style="margin-bottom:10px;">Hoboken, Jersey City Heights, Weehawken, and nearby neighborhoods.</p>
+        <p style="margin:0;color:var(--muted)">Not sure if we cover your block? <a href="#contact">Ask us</a> — we’ll do our best to help.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Bar -->
+  <section aria-label="Quick contact" style="padding:24px 0; background:#f1f5f9; border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0;">
+    <div class="container" style="display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+      <strong>Need help now?</strong>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="cta" href="tel:+12015550123">Call (201) 555‑0123</a>
+        <a class="secondary" href="#contact">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container split">
+      <div>
+        <h2 class="section-title">Request Service</h2>
+        <p class="section-lead">Tell us what’s going on and when we can stop by. We respond quickly.</p>
+        <form id="contactForm" novalidate>
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your full name" required />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="(201) 555‑0123" required />
+          </div>
+          <div>
+            <label for="email">Email (optional)</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" />
+          </div>
+          <div>
+            <label for="service">Service Needed</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>Emergency Repair</option>
+              <option>Drain Cleaning</option>
+              <option>Water Heater</option>
+              <option>Leak Detection</option>
+              <option>Fixture Install</option>
+              <option>Sewer / Camera Inspection</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Describe the issue</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us what’s happening…" required></textarea>
+          </div>
+          <button class="cta" type="submit">Send Request</button>
+          <p id="formMsg" role="status" style="margin:8px 0 0; color:var(--muted);"></p>
+        </form>
+      </div>
+      <div class="card" aria-label="Contact info">
+        <h3 style="margin-top:0">Contact</h3>
+        <p style="margin:0 0 6px"><strong>Royal Dukes Plumbing</strong></p>
+        <p style="margin:0 0 6px">123 Washington St, Hoboken, NJ 07030</p>
+        <p style="margin:0 0 6px">Phone: <a href="tel:+12015550123">(201) 555‑0123</a></p>
+        <p style="margin:0 0 6px">Email: <a href="mailto:service@royaldukesplumbing.com">service@royaldukesplumbing.com</a></p>
+        <p style="margin:0">Hours: Open 24/7</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span class="logo" aria-hidden="true" style="background:#1f2937;">RD</span>
+        <div>
+          <strong>Royal Dukes Plumbing</strong>
+          <div style="color:#94a3b8; font-size:14px;">Hoboken, NJ • Licensed & Insured</div>
+        </div>
+      </div>
+      <div style="color:#94a3b8; font-size:14px;">© <span id="year"></span> Royal Dukes Plumbing. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for in-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id.length > 1) {
+          const el = document.querySelector(id);
+          if (el) {
+            e.preventDefault();
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+
+    // Simple client-side form handler (replace with your backend / form service)
+    const form = document.getElementById('contactForm');
+    const msg = document.getElementById('formMsg');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      if (!data.name || !data.phone || !data.service || !data.message) {
+        msg.textContent = 'Please fill out required fields.';
+        return;
+      }
+      msg.textContent = 'Thanks! Your request has been received. We\'ll call you shortly.';
+      form.reset();
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
